@@ -10,19 +10,19 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.forepaw.clinic.controllers.fxcontrollers.DeleteCustomerController">
    <children>
-      <ImageView fitHeight="30.0" fitWidth="40.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="forepawLogo" fitHeight="30.0" fitWidth="40.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@./images/logo.png" />
          </image>
       </ImageView>
-      <Label layoutX="53.0" layoutY="16.0" prefHeight="30.0" prefWidth="79.0" text="forepaw">
+      <Label fx:id="forepawLabel" layoutX="53.0" layoutY="16.0" prefHeight="30.0" prefWidth="79.0" text="forepaw">
          <font>
             <Font name="Poppins Regular" size="19.0" />
          </font>
       </Label>
-      <Label contentDisplay="CENTER" layoutX="14.0" layoutY="154.0" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="add customer" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="addCustomerLabel" contentDisplay="CENTER" layoutX="14.0" layoutY="154.0" onMouseClicked="#addCustomerMouseClicked" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="add customer" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
@@ -30,7 +30,7 @@
             <Insets />
          </opaqueInsets>
       </Label>
-      <Label contentDisplay="CENTER" layoutX="14.0" layoutY="196.0" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="update customer" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="updateCustomerLabel" contentDisplay="CENTER" layoutX="14.0" layoutY="196.0" onMouseClicked="#updateCustomerMouseClicked" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="update customer" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
@@ -38,7 +38,7 @@
             <Insets />
          </opaqueInsets>
       </Label>
-      <Label contentDisplay="CENTER" layoutX="14.0" layoutY="238.0" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="view customers" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="viewCustomersLabel" contentDisplay="CENTER" layoutX="14.0" layoutY="238.0" onMouseClicked="#viewCustomersMouseClicked" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="view customers" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
@@ -82,39 +82,39 @@
             <Font name="Poppins Regular" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="310.0" layoutY="347.0" prefHeight="30.0" prefWidth="160.0" style="-fx-alignment: center; -fx-background-color: black;" text="Delete Customer" textFill="WHITE">
+      <Label fx:id="deleteCustomerLabel" layoutX="310.0" layoutY="347.0" onMouseClicked="#deleteCustomerMouseClicked" prefHeight="30.0" prefWidth="160.0" style="-fx-alignment: center; -fx-background-color: black;" text="Delete Customer" textFill="WHITE">
          <font>
             <Font name="Poppins Regular" size="16.0" />
          </font>
       </Label>
-      <TextField layoutX="306.0" layoutY="117.0" prefHeight="20.0" prefWidth="167.0">
+      <TextField fx:id="firstNameText" editable="false" layoutX="306.0" layoutY="117.0" prefHeight="20.0" prefWidth="167.0">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="306.0" layoutY="152.0" prefHeight="20.0" prefWidth="167.0">
+      <TextField fx:id="lastNameText" editable="false" layoutX="306.0" layoutY="152.0" prefHeight="20.0" prefWidth="167.0">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="306.0" layoutY="187.0" prefHeight="20.0" prefWidth="167.0">
+      <TextField fx:id="phoneText" editable="false" layoutX="306.0" layoutY="187.0" prefHeight="20.0" prefWidth="167.0">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="306.0" layoutY="222.0" prefHeight="20.0" prefWidth="167.0">
+      <TextField fx:id="emailText" editable="false" layoutX="306.0" layoutY="222.0" prefHeight="20.0" prefWidth="167.0">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
       </TextField>
-      <TextArea layoutX="307.0" layoutY="263.0" prefHeight="64.0" prefWidth="244.0" />
-      <TextField layoutX="307.0" layoutY="75.0" prefHeight="30.0" prefWidth="135.0">
+      <TextArea fx:id="addressText" editable="false" layoutX="307.0" layoutY="263.0" prefHeight="64.0" prefWidth="244.0" />
+      <TextField fx:id="customerIdText" layoutX="307.0" layoutY="75.0" prefHeight="30.0" prefWidth="135.0">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
       </TextField>
       <Separator layoutX="197.0" layoutY="56.0" prefHeight="3.0" prefWidth="486.0" />
-      <ImageView fitHeight="23.0" fitWidth="19.0" layoutX="454.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="searchLabel" fitHeight="23.0" fitWidth="19.0" layoutX="454.0" layoutY="80.0" onMouseClicked="#searchMouseClicked" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@./images/search.png" />
          </image>
