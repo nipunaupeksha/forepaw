@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -9,19 +10,19 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.forepaw.clinic.controllers.fxcontrollers.AddUserController">
    <children>
-      <ImageView fitHeight="30.0" fitWidth="40.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="forepawLogo" onMouseClicked="#forepawLogoClicked" fitHeight="30.0" fitWidth="40.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/logo.png" />
          </image>
       </ImageView>
-      <Label layoutX="53.0" layoutY="16.0" prefHeight="30.0" prefWidth="79.0" text="forepaw">
+      <Label fx:id="forepawLabel" onMouseClicked="#forepawLabelClicked" layoutX="53.0" layoutY="16.0" prefHeight="30.0" prefWidth="79.0" text="forepaw">
          <font>
             <Font name="Poppins Regular" size="19.0" />
          </font>
       </Label>
-      <Label contentDisplay="CENTER" layoutX="14.0" layoutY="154.0" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="update user" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="updateUserLabel" contentDisplay="CENTER" layoutX="14.0" layoutY="154.0" onMouseClicked="#updateUserMouseClicked" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="update user" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
@@ -29,7 +30,7 @@
             <Insets />
          </opaqueInsets>
       </Label>
-      <Label contentDisplay="CENTER" layoutX="14.0" layoutY="196.0" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="view users" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="viewUsersLabel" contentDisplay="CENTER" layoutX="14.0" layoutY="196.0" onMouseClicked="#viewUsersMouseClicked" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="view users" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
@@ -37,7 +38,7 @@
             <Insets />
          </opaqueInsets>
       </Label>
-      <Label contentDisplay="CENTER" layoutX="14.0" layoutY="238.0" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="delete user" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="deleteUserLabel" contentDisplay="CENTER" layoutX="14.0" layoutY="238.0" onMouseClicked="#deleteUserMouseClicked" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="delete user" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
@@ -71,27 +72,17 @@
             <Font name="Poppins Regular" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="333.0" layoutY="196.0" prefHeight="30.0" prefWidth="160.0" style="-fx-alignment: center; -fx-background-color: black;" text="Add User" textFill="WHITE">
+      <Label fx:id="addUserLabel" layoutX="333.0" layoutY="196.0" onMouseClicked="#addUserMouseClicked" prefHeight="30.0" prefWidth="160.0" style="-fx-alignment: center; -fx-background-color: black;" text="Add User" textFill="WHITE">
          <font>
             <Font name="Poppins Regular" size="16.0" />
          </font>
       </Label>
-      <TextField layoutX="307.0" layoutY="78.0" prefHeight="20.0" prefWidth="167.0">
+      <TextField fx:id="usernameText" layoutX="307.0" layoutY="78.0" prefHeight="20.0" prefWidth="167.0">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="307.0" layoutY="113.0" prefHeight="20.0" prefWidth="167.0">
-         <font>
-            <Font name="Poppins Regular" size="14.0" />
-         </font>
-      </TextField>
-      <TextField layoutX="307.0" layoutY="148.0" prefHeight="30.0" prefWidth="167.0">
-         <font>
-            <Font name="Poppins Regular" size="14.0" />
-         </font>
-      </TextField>
-      <TextField layoutX="588.0" layoutY="75.0" prefHeight="30.0" prefWidth="79.0">
+      <TextField fx:id="userIdText" editable="false" layoutX="588.0" layoutY="75.0" prefHeight="30.0" prefWidth="79.0">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
@@ -102,5 +93,15 @@
             <Font name="Poppins Regular" size="14.0" />
          </font>
       </Label>
+      <PasswordField fx:id="passwordText" layoutX="307.0" layoutY="112.0" prefHeight="25.0" prefWidth="167.0">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </PasswordField>
+      <PasswordField fx:id="retypePasswordText" layoutX="307.0" layoutY="147.0" prefHeight="25.0" prefWidth="167.0">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </PasswordField>
    </children>
 </Pane>

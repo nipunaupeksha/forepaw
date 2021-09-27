@@ -10,19 +10,19 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.forepaw.clinic.controllers.fxcontrollers.AddRoleController">
    <children>
-      <ImageView fitHeight="30.0" fitWidth="40.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="forepawLogo" fitHeight="30.0" fitWidth="40.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#forepawLogoClicked" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@./images/logo.png" />
          </image>
       </ImageView>
-      <Label layoutX="53.0" layoutY="16.0" prefHeight="30.0" prefWidth="79.0" text="forepaw">
+      <Label fx:id="forepawLabel" layoutX="53.0" layoutY="16.0" onMouseClicked="#forepawLabelClicked" prefHeight="30.0" prefWidth="79.0" text="forepaw">
          <font>
             <Font name="Poppins Regular" size="19.0" />
          </font>
       </Label>
-      <Label contentDisplay="CENTER" layoutX="14.0" layoutY="154.0" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="update role" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="updateRoleLabel" contentDisplay="CENTER" layoutX="14.0" layoutY="154.0" onMouseClicked="#updateRoleMouseClicked" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="update role" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
@@ -30,7 +30,7 @@
             <Insets />
          </opaqueInsets>
       </Label>
-      <Label contentDisplay="CENTER" layoutX="14.0" layoutY="196.0" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="view roles" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="viewRolesLabel" contentDisplay="CENTER" layoutX="14.0" layoutY="196.0" onMouseClicked="#viewRolesMouseClicked" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="view roles" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
@@ -38,7 +38,7 @@
             <Insets />
          </opaqueInsets>
       </Label>
-      <Label contentDisplay="CENTER" layoutX="14.0" layoutY="238.0" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="delete role" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="deleteRoleLabel" contentDisplay="CENTER" layoutX="14.0" layoutY="238.0" onMouseClicked="#deleteRoleMouseClicked" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="delete role" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
@@ -67,28 +67,28 @@
             <Font name="Poppins Regular" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="494.0" layoutY="80.0" text="role id">
+      <Label layoutX="518.0" layoutY="80.0" text="role id">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="343.0" layoutY="245.0" prefHeight="30.0" prefWidth="160.0" style="-fx-alignment: center; -fx-background-color: black;" text="Add Role" textFill="WHITE">
+      <Label fx:id="addRoleLabel" layoutX="343.0" layoutY="245.0" onMouseClicked="#addRoleMouseClicked" prefHeight="30.0" prefWidth="160.0" style="-fx-alignment: center; -fx-background-color: black;" text="Add Role" textFill="WHITE">
          <font>
             <Font name="Poppins Regular" size="16.0" />
          </font>
       </Label>
-      <TextField layoutX="307.0" layoutY="78.0" prefHeight="20.0" prefWidth="167.0" text="asdad">
+      <TextField fx:id="roleNameText" layoutX="307.0" layoutY="78.0" prefHeight="20.0" prefWidth="167.0">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="307.0" layoutY="113.0" prefHeight="20.0" prefWidth="167.0" text="asdad">
+      <TextField fx:id="priorityText" layoutX="307.0" layoutY="113.0" prefHeight="20.0" prefWidth="167.0">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
       </TextField>
-      <TextArea layoutX="307.0" layoutY="152.0" prefHeight="64.0" prefWidth="244.0" />
-      <TextField layoutX="588.0" layoutY="75.0" prefHeight="30.0" prefWidth="79.0" text="asdad">
+      <TextArea fx:id="descriptionText" layoutX="307.0" layoutY="152.0" prefHeight="64.0" prefWidth="244.0" />
+      <TextField fx:id="roleIdText" editable="false" layoutX="588.0" layoutY="75.0" prefHeight="30.0" prefWidth="79.0">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
