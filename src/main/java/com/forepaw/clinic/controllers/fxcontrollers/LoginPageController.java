@@ -7,30 +7,39 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class LoginPageController {
-    @FXML
-    private Label loginButton;
-    private PasswordField passwordText;
-    private TextField usernameText;
-    private Label warningLabel;
+    public Label loginButton;
+    public PasswordField passwordText;
+    public TextField usernameText;
+    public Label warningLabel;
 
     @FXML
     protected void onLoginButtonClicked() {
-        User user = new User(usernameText.getText(), passwordText.getText());
-        try {
-            boolean checkUser = UserController.checkUser(user);
-            if (checkUser == true) {
-                LoginPage.launch();
-            } else {
-                warningLabel.setText("Invalid credentials.");
+        if (usernameText.getText().trim().equals("") || passwordText.getText().trim().equals("")) {
+            warningLabel.setText("Fill the empty fields.");
+        } else {
+            User user = new User(usernameText.getText(), passwordText.getText());
+            try {
+                boolean checkUser = UserController.checkUser(user);
+                if (checkUser == true) {
+                    Stage stage = (Stage) loginButton.getScene().getWindow();
+                    stage.close();
+                    new LoginPage().start(stage);
+                } else {
+                    warningLabel.setText("Invalid credentials.");
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         }
     }
 }

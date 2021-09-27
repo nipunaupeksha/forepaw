@@ -12,19 +12,19 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.forepaw.clinic.controllers.fxcontrollers.AddAppointmentController">
    <children>
-      <ImageView fitHeight="30.0" fitWidth="40.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="forepawLogo" onMouseClicked="#forepawLogoClicked" fitHeight="30.0" fitWidth="40.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@./images/logo.png" />
          </image>
       </ImageView>
-      <Label layoutX="53.0" layoutY="16.0" prefHeight="30.0" prefWidth="79.0" text="forepaw">
+      <Label fx:id="forepawLabel" onMouseClicked="#forepawLabelClicked" layoutX="53.0" layoutY="16.0" prefHeight="30.0" prefWidth="79.0" text="forepaw">
          <font>
             <Font name="Poppins Regular" size="19.0" />
          </font>
       </Label>
-      <Label contentDisplay="CENTER" layoutX="14.0" layoutY="154.0" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="remove appointment" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="removeAppointmentLabel" contentDisplay="CENTER" layoutX="14.0" layoutY="154.0" onMouseClicked="#removeAppointmentMouseClicked" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="remove appointment" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
@@ -63,28 +63,28 @@
             <Font name="Poppins Regular" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="343.0" layoutY="314.0" prefHeight="30.0" prefWidth="160.0" style="-fx-alignment: center; -fx-background-color: black;" text="Add Appointment" textFill="WHITE">
+      <Label fx:id="addAppointmentLabel" layoutX="343.0" layoutY="314.0" onMouseClicked="#addAppointmentMouseClicked" prefHeight="30.0" prefWidth="160.0" style="-fx-alignment: center; -fx-background-color: black;" text="Add Appointment" textFill="WHITE">
          <font>
             <Font name="Poppins Regular" size="16.0" />
          </font>
       </Label>
-      <TextArea layoutX="340.0" layoutY="228.0" prefHeight="64.0" prefWidth="244.0" />
+      <TextArea fx:id="notesText" layoutX="340.0" layoutY="228.0" prefHeight="64.0" prefWidth="244.0" />
       <Separator layoutX="197.0" layoutY="56.0" prefHeight="3.0" prefWidth="486.0" />
       <Label layoutX="504.0" layoutY="80.0" text="appointment id">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
       </Label>
-      <TextField accessibleRole="COMBO_BOX" layoutX="618.0" layoutY="75.0" prefHeight="30.0" prefWidth="65.0">
+      <TextField id="appointmentIdText" accessibleRole="COMBO_BOX" editable="false" layoutX="618.0" layoutY="75.0" prefHeight="30.0" prefWidth="65.0">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
       </TextField>
-      <ComboBox layoutX="340.0" layoutY="78.0" prefHeight="25.0" prefWidth="160.0" />
-      <ComboBox layoutX="340.0" layoutY="115.0" prefHeight="25.0" prefWidth="160.0" />
-      <DatePicker layoutX="341.0" layoutY="152.0" prefHeight="25.0" prefWidth="160.0" />
-      <ComboBox layoutX="454.0" layoutY="189.0" prefHeight="25.0" prefWidth="39.0" />
-      <ComboBox layoutX="340.0" layoutY="188.0" prefHeight="25.0" prefWidth="39.0" />
-      <ComboBox layoutX="398.0" layoutY="189.0" prefHeight="25.0" prefWidth="39.0" />
+      <ComboBox fx:id="customerComboBox" layoutX="340.0" layoutY="78.0" prefHeight="25.0" prefWidth="160.0" />
+      <ComboBox fx:id="doctorComboBox" layoutX="340.0" layoutY="115.0" prefHeight="25.0" prefWidth="160.0" />
+      <DatePicker fx:id="dateText" layoutX="341.0" layoutY="152.0" prefHeight="25.0" prefWidth="160.0" />
+      <ComboBox fx:id="ampmComboBox" layoutX="454.0" layoutY="189.0" prefHeight="25.0" prefWidth="39.0" />
+      <ComboBox fx:id="hourComboBox" layoutX="340.0" layoutY="188.0" prefHeight="25.0" prefWidth="39.0" />
+      <ComboBox fx:id="minuteComboBox" layoutX="398.0" layoutY="189.0" prefHeight="25.0" prefWidth="39.0" />
    </children>
 </Pane>

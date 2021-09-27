@@ -24,7 +24,7 @@ public class UserController {
 
     //check whether the username and password is correct
     public static boolean checkUser(User user) throws SQLException, ClassNotFoundException{
-        String sql = "Select * from user where userName='" + user.getUsername() + "' && password=PASSWORD('" + user.getPassword() + "')";
+        String sql = "Select * from user where userName='" + user.getUsername() + "' && password='" + user.getPassword() + "'";
         Connection conn = DBConnection.getDBConnection().getConnection();
         Statement stm = conn.createStatement();
         ResultSet rst = stm.executeQuery(sql);

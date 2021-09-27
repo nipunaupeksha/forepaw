@@ -8,5 +8,8 @@ module com.forepaw.clinic {
     requires java.sql;
 
     opens com.forepaw.clinic to javafx.fxml;
+    opens com.forepaw.clinic.controllers.fxcontrollers to javafx.fxml ;
+    opens com.forepaw.clinic.models to javafx.fxml;
+    opens com.forepaw.clinic.controllers.dbcontrollers to javafx.fxml;
     exports com.forepaw.clinic;
 }
