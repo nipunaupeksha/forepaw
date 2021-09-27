@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.forepaw.clinic.controllers.fxcontrollers.HomePageController">
+   <children>
+      <ImageView fitHeight="30.0" fitWidth="40.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="53.0" layoutY="16.0" prefHeight="30.0" prefWidth="79.0" text="forepaw">
+         <font>
+            <Font name="Poppins Regular" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="78.0" prefHeight="30.0" prefWidth="141.0" style="-fx-alignment: center; -fx-background-color: black;" text="employees" textFill="WHITE">
+         <font>
+            <Font name="Poppins Regular" size="16.0" />
+         </font>
+      </Label>
+      <Separator layoutX="174.0" layoutY="78.0" orientation="VERTICAL" prefHeight="322.0" prefWidth="5.0" />
+      <Label layoutX="192.0" layoutY="78.0" prefHeight="30.0" prefWidth="141.0" style="-fx-alignment: center; -fx-background-color: black;" text="customers" textFill="WHITE">
+         <font>
+            <Font name="Poppins Regular" size="16.0" />
+         </font>
+      </Label>
+      <Separator layoutX="347.0" layoutY="79.0" orientation="VERTICAL" prefHeight="322.0" prefWidth="5.0" />
+      <Label layoutX="361.0" layoutY="78.0" prefHeight="30.0" prefWidth="141.0" style="-fx-alignment: center; -fx-background-color: black;" text="roles" textFill="WHITE">
+         <font>
+            <Font name="Poppins Regular" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="531.0" layoutY="78.0" prefHeight="30.0" prefWidth="141.0" style="-fx-alignment: center; -fx-background-color: black;" text="appointments" textFill="WHITE">
+         <font>
+            <Font name="Poppins Regular" size="16.0" />
+         </font>
+      </Label>
+      <Separator layoutX="513.0" layoutY="79.0" orientation="VERTICAL" prefHeight="322.0" prefWidth="5.0" />
+      <Label layoutX="531.0" layoutY="275.0" prefHeight="30.0" prefWidth="141.0" style="-fx-alignment: center; -fx-background-color: black;" text="users" textFill="WHITE">
+         <font>
+            <Font name="Poppins Regular" size="16.0" />
+         </font>
+      </Label>
+      <Separator layoutX="516.0" layoutY="257.0" prefHeight="5.0" prefWidth="170.0" />
+      <Label layoutX="22.0" layoutY="125.0" text="•">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="155.0" text="•">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="182.0" text="•">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="214.0" text="•">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="addEmployee" layoutX="39.0" layoutY="134.0" onMouseClicked="#addEmployeeMouseClicked" onMouseEntered="#addEmployeeMouseEntered" onMouseExited="#addEmployeeMouseExited" text="add employee">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="updateEmployee" layoutX="41.0" layoutY="163.0" onMouseClicked="#updateEmployeeMouseClicked" onMouseEntered="#updateEmployeeMouseEntered" onMouseExited="#updateEmployeeMouseExited" text="update employee">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="viewEmployees" layoutX="41.0" layoutY="191.0" onMouseClicked="#viewEmployeesMouseClicked" onMouseEntered="#viewEmployeesMouseEntered" onMouseExited="#viewEmployeesMouseExited" text="view employees">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="deleteEmployee" layoutX="41.0" layoutY="222.0" onMouseClicked="#deleteEmployeeMouseClicked" onMouseEntered="#deleteEmployeeMouseEntered" onMouseExited="#deleteEmployeeMouseExited" text="delete employee">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="187.0" layoutY="127.0" text="•">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="187.0" layoutY="156.0" text="•">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="187.0" layoutY="184.0" text="•">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="187.0" layoutY="214.0" text="•">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="addCustomer" layoutX="207.0" layoutY="136.0" onMouseClicked="#addCustomerMouseClicked" onMouseEntered="#addCustomerMouseEntered" onMouseExited="#addCustomerMouseExited" text="add customer">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="updateCustomer" layoutX="207.0" layoutY="164.0" onMouseClicked="#updateCustomerMouseClicked" onMouseEntered="#updateCustomerMouseEntered" onMouseExited="#updateCustomerMouseExited" text="update customer">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="viewCustomers" layoutX="207.0" layoutY="192.0" onMouseClicked="#viewCustomersMouseClicked" onMouseEntered="#viewCustomersMouseEntered" onMouseExited="#viewCustomersMouseExited" text="view customers">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="deleteCustomer" layoutX="207.0" layoutY="222.0" onMouseClicked="#deleteCustomerMouseClicked" onMouseEntered="#deleteCustomerMouseEntered" onMouseExited="#deleteCustomerMouseExited" text="delete customer">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="364.0" layoutY="129.0" text="•">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="364.0" layoutY="157.0" text="•">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="364.0" layoutY="184.0" text="•">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="364.0" layoutY="214.0" text="•">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="addRole" layoutX="382.0" layoutY="137.0" onMouseClicked="#addRoleMouseClicked" onMouseEntered="#addRoleMouseEntered" onMouseExited="#addRoleMouseExited" text="add role">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="updateRole" layoutX="382.0" layoutY="165.0" onMouseClicked="#updateRoleMouseClicked" onMouseEntered="#updateRoleMouseEntered" onMouseExited="#updateRoleMouseExited" text="update role">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="viewRoles" layoutX="382.0" layoutY="192.0" onMouseClicked="#viewRolesMouseClicked" onMouseEntered="#viewRolesMouseEntered" onMouseExited="#viewRolesMouseExited" text="view roles">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="deleteRole" layoutX="382.0" layoutY="222.0" onMouseClicked="#deleteRoleMouseClicked" onMouseEntered="#deleteRoleMouseEntered" onMouseExited="#deleteRoleMouseExited" text="delete role">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="521.0" layoutY="130.0" text="•">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="520.0" layoutY="158.0" text="•">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="520.0" layoutY="183.0" text="•">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="521.0" layoutY="214.0" text="•">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="addAppointment" layoutX="534.0" layoutY="138.0" onMouseClicked="#addAppointmentMouseClicked" onMouseEntered="#addAppointmentMouseEntered" onMouseExited="#addAppointmentMouseExited" text="add appointment">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="updateAppointment" layoutX="534.0" layoutY="166.0" onMouseClicked="#updateAppointmentMouseClicked" onMouseEntered="#updateAppointmentMouseEntered" onMouseExited="#updateAppointmentMouseExited" text="update appointment">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="viewAppointments" layoutX="534.0" layoutY="192.0" onMouseClicked="#viewAppointmentsMouseClicked" onMouseEntered="#viewAppointmentsMouseEntered" onMouseExited="#viewAppointmentsMouseExited" text="view appointments">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="removeAppointment" layoutX="534.0" layoutY="221.0" onMouseClicked="#removeAppointmentMouseClicked" onMouseEntered="#removeAppointmentMouseEntered" onMouseExited="#removeAppointmentMouseExited" text="remove appointment">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="addUser" layoutX="532.0" layoutY="313.0" onMouseClicked="#addUserMouseClicked" onMouseEntered="#addUserMouseEntered" onMouseExited="#addUserMouseExited" text="add user">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="520.0" layoutY="305.0" text="•">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
