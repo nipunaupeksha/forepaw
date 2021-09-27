@@ -121,5 +121,10 @@
          </font>
       </Label>
       <ComboBox fx:id="roleComboBox" layoutX="307.0" layoutY="296.0" prefHeight="25.0" prefWidth="167.0" />
+      <Label fx:id="warningLabel" layoutX="467.0" layoutY="346.0" prefHeight="17.0" prefWidth="209.0" style="-fx-alignment: center;" textFill="#a40505">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </Label>
    </children>
 </Pane>

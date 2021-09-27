@@ -5,9 +5,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class DeleteRolePage extends Application {
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(DeleteRolePage.class.getResource("delete-role.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);

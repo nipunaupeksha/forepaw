@@ -5,9 +5,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class RemoveAppointmentPage extends Application {
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(RemoveAppointmentPage.class.getResource("remove-appointment.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);

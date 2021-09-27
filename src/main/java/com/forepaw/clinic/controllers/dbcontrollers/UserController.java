@@ -34,4 +34,13 @@ public class UserController {
             return false;
         }
     }
+
+    //add new user
+    public static boolean addUser(User user)throws SQLException, ClassNotFoundException{
+        String sql = "Insert into user values('" + user.getUserId() + "','" + user.getUsername() + "','" + user.getPassword() + "')";
+        Connection conn = DBConnection.getDBConnection().getConnection();
+        Statement stm = conn.createStatement();
+        int res = stm.executeUpdate(sql);
+        return res > 0;
+    }
 }
