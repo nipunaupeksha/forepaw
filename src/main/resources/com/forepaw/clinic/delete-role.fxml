@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
@@ -10,19 +11,19 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.forepaw.clinic.controllers.fxcontrollers.DeleteRoleController">
    <children>
-      <ImageView fitHeight="30.0" fitWidth="40.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="forepawLogo" onMouseClicked="#forepawLogoClicked" fitHeight="30.0" fitWidth="40.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@./images/logo.png" />
          </image>
       </ImageView>
-      <Label layoutX="53.0" layoutY="16.0" prefHeight="30.0" prefWidth="79.0" text="forepaw">
+      <Label fx:id="forepawLabel" onMouseClicked="#forepawLabelClicked" layoutX="53.0" layoutY="16.0" prefHeight="30.0" prefWidth="79.0" text="forepaw">
          <font>
             <Font name="Poppins Regular" size="19.0" />
          </font>
       </Label>
-      <Label contentDisplay="CENTER" layoutX="14.0" layoutY="154.0" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="add role" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="addRoleLabel" contentDisplay="CENTER" layoutX="14.0" layoutY="154.0" onMouseClicked="#addRoleMouseClicked" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="add role" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
@@ -30,7 +31,7 @@
             <Insets />
          </opaqueInsets>
       </Label>
-      <Label contentDisplay="CENTER" layoutX="14.0" layoutY="196.0" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="update role" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="updateRoleLabel" contentDisplay="CENTER" layoutX="14.0" layoutY="196.0" onMouseClicked="#updateRoleMouseClicked" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="update role" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
@@ -38,7 +39,7 @@
             <Insets />
          </opaqueInsets>
       </Label>
-      <Label contentDisplay="CENTER" layoutX="14.0" layoutY="238.0" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="view roles" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="viewRolesLabel" contentDisplay="CENTER" layoutX="14.0" layoutY="238.0" onMouseClicked="#viewRolesMouseClicked" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="view roles" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
@@ -72,32 +73,28 @@
             <Font name="Poppins Regular" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="310.0" layoutY="271.0" prefHeight="30.0" prefWidth="160.0" style="-fx-alignment: center; -fx-background-color: black;" text="Delete Role" textFill="WHITE">
+      <Label fx:id="deleteRoleLabel" layoutX="310.0" layoutY="271.0" onMouseClicked="#deleteRoleMouseClicked" prefHeight="30.0" prefWidth="160.0" style="-fx-alignment: center; -fx-background-color: black;" text="Delete Role" textFill="WHITE">
          <font>
             <Font name="Poppins Regular" size="16.0" />
          </font>
       </Label>
-      <TextField layoutX="306.0" layoutY="117.0" prefHeight="20.0" prefWidth="167.0">
+      <TextField fx:id="nameText" editable="false" layoutX="306.0" layoutY="117.0" prefHeight="20.0" prefWidth="167.0">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="306.0" layoutY="152.0" prefHeight="20.0" prefWidth="167.0">
-         <font>
-            <Font name="Poppins Regular" size="14.0" />
-         </font>
-      </TextField>
-      <TextArea layoutX="307.0" layoutY="190.0" prefHeight="64.0" prefWidth="244.0" />
-      <TextField layoutX="307.0" layoutY="75.0" prefHeight="30.0" prefWidth="135.0">
+      <TextArea fx:id="descriptionText" editable="false" layoutX="307.0" layoutY="190.0" prefHeight="64.0" prefWidth="244.0" />
+      <TextField fx:id="roleIdText" layoutX="307.0" layoutY="75.0" prefHeight="30.0" prefWidth="135.0">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
       </TextField>
       <Separator layoutX="197.0" layoutY="56.0" prefHeight="3.0" prefWidth="486.0" />
-      <ImageView fitHeight="23.0" fitWidth="19.0" layoutX="454.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="searchLabel" fitHeight="23.0" fitWidth="19.0" layoutX="454.0" layoutY="80.0" onMouseClicked="#searchMouseClicked" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@./images/search.png" />
          </image>
       </ImageView>
+      <ComboBox fx:id="priorityComboBox" layoutX="307.0" layoutY="157.0" prefHeight="25.0" prefWidth="167.0" />
    </children>
 </Pane>
