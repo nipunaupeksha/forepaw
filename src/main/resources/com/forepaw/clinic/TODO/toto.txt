@@ -1,0 +1,12 @@
+Install Maven
+
+Procedure-> model, controller, CRUD
+Add procedure table to the database
+
+Delete User, View User  - remove them (buttons)
+Update User
+Update Appointment
+
+XAMPP
+https://www.youtube.com/watch?v=-f8N4FEQWyY&ab_channel=edureka%21
+source forepaw.sql file
