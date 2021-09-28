@@ -1,4 +1,6 @@
 Install Maven
+mvn -v
+mvn clean install -DskipTests
 
 Procedure-> model, controller, CRUD
 Add procedure table to the database
