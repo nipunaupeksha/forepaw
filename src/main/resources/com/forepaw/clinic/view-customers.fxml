@@ -53,14 +53,13 @@
          </font>
       </Label>
       <Separator layoutX="197.0" layoutY="56.0" prefHeight="3.0" prefWidth="486.0" />
-      <TableView layoutX="205.0" layoutY="69.0" prefHeight="314.0" prefWidth="470.0">
+      <TableView fx:id="customerTable" layoutX="205.0" layoutY="69.0" prefHeight="314.0" prefWidth="470.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="eid" />
-          <TableColumn prefWidth="75.0" text="name" />
-            <TableColumn prefWidth="75.0" text="role" />
-            <TableColumn prefWidth="58.4000244140625" text="email" />
-            <TableColumn prefWidth="64.79998779296875" text="phone" />
-            <TableColumn prefWidth="119.5999755859375" text="address" />
+          <TableColumn fx:id="col_cid" prefWidth="75.0" text="cid" />
+          <TableColumn fx:id="col_name" prefWidth="75.0" text="name" />
+            <TableColumn fx:id="col_email" prefWidth="97.5999755859375" text="email" />
+            <TableColumn fx:id="col_phone" prefWidth="93.5999755859375" text="phone" />
+            <TableColumn fx:id="col_address" prefWidth="128.800048828125" text="address" />
         </columns>
       </TableView>
    </children>

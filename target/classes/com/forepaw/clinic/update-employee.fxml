@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.forepaw.clinic.controllers.fxcontrollers.UpdateEmployeeController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.forepaw.clinic.controllers.fxcontrollers.UpdateEmployeeController">
    <children>
       <ImageView fx:id="forepawLogo" fitHeight="30.0" fitWidth="40.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#forepawLogoClicked" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -109,7 +104,7 @@
          </font>
       </TextField>
       <TextArea fx:id="addressText" layoutX="307.0" layoutY="220.0" prefHeight="64.0" prefWidth="244.0" />
-      <TextField fx:id="employeeIdText" editable="false" layoutX="571.0" layoutY="75.0" prefHeight="30.0" prefWidth="79.0">
+      <TextField fx:id="employeeIdText" layoutX="571.0" layoutY="75.0" prefHeight="30.0" prefWidth="79.0">
          <font>
             <Font name="Poppins Regular" size="14.0" />
          </font>
@@ -123,7 +118,7 @@
       <ComboBox fx:id="roleComboBox" layoutX="307.0" layoutY="296.0" prefHeight="25.0" prefWidth="167.0" />
       <ImageView fx:id="searchLabel" fitHeight="20.0" fitWidth="26.0" layoutX="655.0" layoutY="80.0" onMouseClicked="#searchMouseClicked" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../05/src/main/resources/com/forepaw/clinic/images/search.png" />
+            <Image url="@./images/search.png" />
          </image>
       </ImageView>
       <Label fx:id="warningLabel" layoutX="268.0" layoutY="378.0" prefHeight="20.0" prefWidth="276.0" style="-fx-alignment: center;" textFill="#790808">

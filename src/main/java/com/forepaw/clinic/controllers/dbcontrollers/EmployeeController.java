@@ -49,7 +49,7 @@ public class EmployeeController {
 
     //update employee
     public static boolean updateEmployee(Employee employee) throws ClassNotFoundException, SQLException {
-        String sql = "Update employee set roleId=?,firstName=?,secondName=?,phone=?,email=?,address=? where employeeId=?";
+        String sql = "Update employee set roleId=?,firstName=?,lastName=?,phone=?,email=?,address=? where employeeId=?";
         Connection conn = DBConnection.getDBConnection().getConnection();
         PreparedStatement stm = conn.prepareStatement(sql);
         stm.setObject(1, employee.getRoleId());

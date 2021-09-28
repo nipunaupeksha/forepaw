@@ -38,9 +38,14 @@ public class UpdateEmployeeController {
     public Label addEmployeeLabel;
     public Label viewEmployeesLabel;
     public Label deleteEmployeeLabel;
-    public Label searchLabel;
     public Label warningLabel;
     public String empId;
+    public ImageView searchLabel;
+
+    @FXML
+    public void initialize(){
+        phoneText.setText("+94");
+    }
 
     @FXML
     protected void forepawLabelClicked() {
@@ -67,7 +72,7 @@ public class UpdateEmployeeController {
     @FXML
     protected void searchMouseClicked() {
         String employeeId = employeeIdText.getText().trim().toLowerCase();
-        if (!employeeId.equals("")) {
+        if (employeeId.equals("")) {
             warningLabel.setTextFill(Color.RED);
             warningLabel.setText("Employee Id is null");
         } else {
@@ -149,6 +154,12 @@ public class UpdateEmployeeController {
                         if(status==true){
                             warningLabel.setTextFill(Color.GREEN);
                             warningLabel.setText("Employee updated.");
+                            employeeIdText.setText("");
+                            firstNameText.setText("");
+                            lastNameText.setText("");
+                            emailText.setText("");
+                            phoneText.setText("+94");
+                            addressText.setText("");
                         }else{
                             warningLabel.setTextFill(Color.RED);
                             warningLabel.setText("Employee not updated.");

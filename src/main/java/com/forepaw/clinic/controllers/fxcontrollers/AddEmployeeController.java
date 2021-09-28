@@ -44,17 +44,17 @@ public class AddEmployeeController {
     @FXML
     public void initialize() {
         String val = VetClinicMethods.getNewId("e", "employee");
-        if (val.trim().length()>0) {
+        if (val.trim().length() > 0) {
             employeeIdText.setText(val);
         } else {
             employeeIdText.setText("e000");
         }
         phoneText.setText("+94");
         try {
-            ArrayList<Role>roleList = RoleController.getAllRoles();
-            ArrayList<String>roleListNames = new ArrayList<>();
-            for(Role role:roleList){
-                roleListNames.add(role.getRoleId()+" - "+role.getRoleName());
+            ArrayList<Role> roleList = RoleController.getAllRoles();
+            ArrayList<String> roleListNames = new ArrayList<>();
+            for (Role role : roleList) {
+                roleListNames.add(role.getRoleId() + " - " + role.getRoleName());
             }
             roleComboBox.setItems(FXCollections.observableArrayList(roleListNames));
         } catch (ClassNotFoundException e) {
@@ -146,6 +146,17 @@ public class AddEmployeeController {
                     } else {
                         warningLabel.setTextFill(Color.GREEN);
                         warningLabel.setText("Employee added.");
+                        firstNameText.setText("");
+                        lastNameText.setText("");
+                        phoneText.setText("+94");
+                        addressText.setText("");
+                        emailText.setText("");
+                        String temp = VetClinicMethods.getNewId("e", "employee");
+                        if (temp != null) {
+                            employeeIdText.setText(temp);
+                        } else {
+                            employeeIdText.setText("");
+                        }
                     }
                 } catch (SQLException e) {
                     e.printStackTrace();

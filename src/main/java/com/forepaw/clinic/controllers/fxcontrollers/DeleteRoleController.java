@@ -98,6 +98,10 @@ public class DeleteRoleController {
                 if (status == true) {
                     warningLabel.setTextFill(Color.GREEN);
                     warningLabel.setText("role deleted");
+                    roleIdText.setText("");
+                    nameText.setText("");
+                    priorityText.setText("");
+                    descriptionText.setText("");
                 } else {
                     warningLabel.setTextFill(Color.RED);
                     warningLabel.setText("role can not be deleted");

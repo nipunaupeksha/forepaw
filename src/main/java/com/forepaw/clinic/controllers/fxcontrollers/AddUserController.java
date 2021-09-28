@@ -2,6 +2,7 @@ package com.forepaw.clinic.controllers.fxcontrollers;
 
 import com.forepaw.clinic.HomePage;
 import com.forepaw.clinic.controllers.dbcontrollers.UserController;
+import com.forepaw.clinic.methods.VetClinicMethods;
 import com.forepaw.clinic.models.User;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -27,6 +28,16 @@ public class AddUserController {
     public Label updateUserLabel;
     public Label viewUsersLabel;
     public Label warningLabel;
+
+    @FXML
+    public void initialize() {
+        String val = VetClinicMethods.getNewId("u", "user");
+        if (val != null) {
+            userIdText.setText(val);
+        } else {
+            userIdText.setText("");
+        }
+    }
 
     @FXML
     protected void forepawLabelClicked() {
@@ -72,6 +83,15 @@ public class AddUserController {
                     if(status==true){
                         warningLabel.setTextFill(Color.GREEN);
                         warningLabel.setText("User added.");
+                        String val = VetClinicMethods.getNewId("u", "user");
+                        if (val != null) {
+                            userIdText.setText(val);
+                        } else {
+                            userIdText.setText("");
+                        }
+                        usernameText.setText("");
+                        passwordText.setText("");
+                        retypePasswordText.setText("");
                     }else{
                         warningLabel.setText("User not added.");
                     }

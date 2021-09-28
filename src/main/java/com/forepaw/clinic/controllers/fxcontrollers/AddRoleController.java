@@ -5,6 +5,7 @@ import com.forepaw.clinic.HomePage;
 import com.forepaw.clinic.RemoveAppointmentPage;
 import com.forepaw.clinic.UpdateRolePage;
 import com.forepaw.clinic.controllers.dbcontrollers.RoleController;
+import com.forepaw.clinic.methods.VetClinicMethods;
 import com.forepaw.clinic.models.Role;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -16,7 +17,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.Locale;
+
 
 public class AddRoleController {
 
@@ -31,6 +32,16 @@ public class AddRoleController {
     public ImageView forepawLogo;
     public Label deleteRoleLabel;
     public Label warningLabel;
+
+    @FXML
+    public void initialize() {
+        String val = VetClinicMethods.getNewId("r", "role");
+        if (val != null) {
+            roleIdText.setText(val);
+        } else {
+            roleIdText.setText("");
+        }
+    }
 
     @FXML
     protected void forepawLabelClicked() {
@@ -68,6 +79,15 @@ public class AddRoleController {
                     if (status == true) {
                         warningLabel.setTextFill(Color.GREEN);
                         warningLabel.setText("Role added.");
+                        String val = VetClinicMethods.getNewId("r", "role");
+                        if (val != null) {
+                            roleIdText.setText(val);
+                        } else {
+                            roleIdText.setText("");
+                        }
+                        roleNameText.setText("");
+                        priorityText.setText("");
+                        descriptionText.setText("");
                     } else {
                         warningLabel.setTextFill(Color.RED);
                         warningLabel.setText("Role could not be added");

@@ -36,6 +36,10 @@ public class UpdateCustomerController {
     public ImageView searchLabel;
     public String custId;
 
+    @FXML
+    public void initialize(){
+        phoneText.setText("+94");
+    }
 
     @FXML
     protected void forepawLabelClicked() {
@@ -87,6 +91,12 @@ public class UpdateCustomerController {
                         if (status == true) {
                             warningLabel.setTextFill(Color.GREEN);
                             warningLabel.setText("Customer updated");
+                            customerIdText.setText("");
+                            firstNameText.setText("");
+                            lastNameText.setText("");
+                            phoneText.setText("+94");
+                            emailText.setText("");
+                            addressText.setText("");
                         } else {
                             warningLabel.setTextFill(Color.RED);
                             warningLabel.setText("Customer could not be updated");

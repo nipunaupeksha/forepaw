@@ -5,6 +5,7 @@ import com.forepaw.clinic.HomePage;
 import com.forepaw.clinic.UpdateCustomerPage;
 import com.forepaw.clinic.ViewCustomersPage;
 import com.forepaw.clinic.controllers.dbcontrollers.CustomerController;
+import com.forepaw.clinic.methods.VetClinicMethods;
 import com.forepaw.clinic.models.Customer;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -35,6 +36,17 @@ public class AddCustomerController {
     public Label viewCustomersLabel;
     public Label deleteCustomerLabel;
     public Label warningLabel;
+
+    @FXML
+    public void initialize(){
+        String val = VetClinicMethods.getNewId("c","customer");
+        if(val!=null){
+            customerIdText.setText(val);
+        }else{
+            customerIdText.setText("");
+        }
+        phoneText.setText("+94");
+    }
 
     @FXML
     protected void forepawLogoMouseClicked() {
@@ -75,6 +87,17 @@ public class AddCustomerController {
                     if(status==true){
                         warningLabel.setTextFill(Color.GREEN);
                         warningLabel.setText("Customer added");
+                        String val = VetClinicMethods.getNewId("c","customer");
+                        if(val!=null){
+                            customerIdText.setText(val);
+                        }else{
+                            customerIdText.setText("");
+                        }
+                        firstNameText.setText("");
+                        lastNameText.setText("");
+                        phoneText.setText("+94");
+                        emailText.setText("");
+                        addressText.setText("");
                     }else{
                         warningLabel.setTextFill(Color.RED);
                         warningLabel.setText("Customer could not be added");

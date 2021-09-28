@@ -5,6 +5,7 @@ import com.forepaw.clinic.RemoveAppointmentPage;
 import com.forepaw.clinic.controllers.dbcontrollers.AppointmentController;
 import com.forepaw.clinic.controllers.dbcontrollers.CustomerController;
 import com.forepaw.clinic.controllers.dbcontrollers.EmployeeController;
+import com.forepaw.clinic.methods.VetClinicMethods;
 import com.forepaw.clinic.models.Appointment;
 import com.forepaw.clinic.models.Customer;
 import com.forepaw.clinic.models.Employee;
@@ -40,6 +41,13 @@ public class AddAppointmentController {
     @FXML
     public void initialize(){
         try{
+            //set id
+            String val = VetClinicMethods.getNewId("a","appointment");
+            if(val!=null){
+                appointmentIdText.setText(val);
+            }else{
+                appointmentIdText.setText("");
+            }
             //get all customers
             ArrayList<Customer> customerList = CustomerController.getAllCustomers();
             //get all doctors
@@ -62,6 +70,7 @@ public class AddAppointmentController {
             ArrayList<String> minutesList = new ArrayList<>();
             String[] ampmArray = {"AM", "PM"};
             List<String> ampmList = Arrays.asList(ampmArray);
+            ampmComboBox.setItems(FXCollections.observableArrayList(ampmList));
 
             for(int i=1;i<=12;i++){
                 hoursList.add(Integer.toString(i));
@@ -69,6 +78,8 @@ public class AddAppointmentController {
             for(int i=0;i<60;i++){
                 minutesList.add(Integer.toString(i));
             }
+            hourComboBox.setItems(FXCollections.observableArrayList(hoursList));
+            minuteComboBox.setItems(FXCollections.observableArrayList(minutesList));
 
         }catch(SQLException e){
             e.printStackTrace();

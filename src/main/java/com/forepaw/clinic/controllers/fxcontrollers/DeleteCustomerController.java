@@ -8,6 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -80,8 +81,21 @@ public class DeleteCustomerController {
         try {
             if(custId.equals(customerId)){
                 boolean status = CustomerController.deleteCustomer(customerId);
+                if(status==true){
+                    warningLabel.setTextFill(Color.GREEN);
+                    warningLabel.setText("customer added");
+                    customerIdText.setText("");
+                    firstNameText.setText("");
+                    lastNameText.setText("");
+                    addressText.setText("");
+                    emailText.setText("");
+                    phoneText.setText("");
+                }else{
+                    warningLabel.setTextFill(Color.RED);
+                    warningLabel.setText("customer not added");
+                }
             }else{
-                warningLabel.setText("Invalid customer details");
+                warningLabel.setText("invalid details");
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -106,12 +120,12 @@ public class DeleteCustomerController {
         String customerId = customerIdText.getText().trim().toLowerCase();
         custId = customerId;
         if (customerId.equals("")) {
-            warningLabel.setText("Customer Id is null");
+            warningLabel.setText("null customer id");
         } else {
             try {
                 Customer customer = CustomerController.searchCustomer(customerId);
                 if (customer == null) {
-                    warningLabel.setText("Customer is not in database");
+                    warningLabel.setText("Incorrect customer");
                 } else {
                     firstNameText.setText(customer.getFirstName());
                     lastNameText.setText(customer.getLastName());
