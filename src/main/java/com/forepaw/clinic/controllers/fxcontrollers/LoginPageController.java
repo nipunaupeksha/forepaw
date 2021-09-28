@@ -1,5 +1,6 @@
 package com.forepaw.clinic.controllers.fxcontrollers;
 
+import com.forepaw.clinic.HomePage;
 import com.forepaw.clinic.LoginPage;
 import com.forepaw.clinic.controllers.dbcontrollers.UserController;
 import com.forepaw.clinic.models.User;
@@ -29,7 +30,7 @@ public class LoginPageController {
                 if (checkUser == true) {
                     Stage stage = (Stage) loginButton.getScene().getWindow();
                     stage.close();
-                    new LoginPage().start(stage);
+                    new HomePage().start(stage);
                 } else {
                     warningLabel.setText("Invalid credentials.");
                 }

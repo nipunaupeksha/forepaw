@@ -362,7 +362,13 @@ public class HomePageController {
     //users
     @FXML
     protected void addUserMouseClicked() {
-        //TODO
+        try {
+            Stage stage = (Stage) addUser.getScene().getWindow();
+            stage.close();
+            new AddUserPage().start(stage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
