@@ -49,4 +49,13 @@ public class RoleController {
         int res = stm.executeUpdate();
         return res > 0;
     }
+
+    //delete roll
+    public static boolean deleteRole(String roleId) throws SQLException, ClassNotFoundException{
+        String sql = "Delete from role where roleId='"+roleId+"'";
+        Connection conn = DBConnection.getDBConnection().getConnection();
+        Statement stm = conn.createStatement();
+        int res = stm.executeUpdate(sql);
+        return res > 0;
+    }
 }

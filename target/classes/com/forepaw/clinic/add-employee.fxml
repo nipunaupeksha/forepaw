@@ -11,115 +11,141 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.forepaw.clinic.controllers.fxcontrollers.AddEmployeeController">
-   <children>
-      <ImageView fx:id="forepawLogo" fitHeight="30.0" fitWidth="40.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#forepawLogoClicked" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@./images/logo.png" />
-         </image>
-      </ImageView>
-      <Label fx:id="forepawLabel" layoutX="53.0" layoutY="16.0" onMouseClicked="#forepawLabelClicked" prefHeight="30.0" prefWidth="79.0" text="forepaw">
-         <font>
-            <Font name="Poppins Regular" size="19.0" />
-         </font>
-      </Label>
-      <Label fx:id="updateEmployeeLabel" contentDisplay="CENTER" layoutX="14.0" layoutY="154.0" onMouseClicked="#updateEmployeeMouseClicked" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="update employee" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="Poppins Regular" size="14.0" />
-         </font>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-      </Label>
-      <Label fx:id="viewEmployeesLabel" contentDisplay="CENTER" layoutX="14.0" layoutY="196.0" onMouseClicked="#viewEmployeesMouseClicked" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="view employees" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="Poppins Regular" size="14.0" />
-         </font>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-      </Label>
-      <Label fx:id="deleteEmployeeLabel" contentDisplay="CENTER" layoutX="14.0" layoutY="238.0" onMouseClicked="#deleteEmployeeMouseClicked" prefHeight="30.0" prefWidth="167.0" style="-fx-alignment: center; -fx-background-color: black;" text="delete employee" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="Poppins Regular" size="14.0" />
-         </font>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-      </Label>
-      <Separator layoutX="197.0" orientation="VERTICAL" prefHeight="401.0" prefWidth="2.0" />
-      <Label layoutX="280.0" layoutY="20.0" prefWidth="244.0" style="-fx-alignment: center;" text="Add Employee">
-         <font>
-            <Font name="Poppins Regular" size="16.0" />
-         </font>
-      </Label>
-      <Label layoutX="215.0" layoutY="80.0" text="first name">
-         <font>
-            <Font name="Poppins Regular" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="215.0" layoutY="117.0" text="last name">
-         <font>
-            <Font name="Poppins Regular" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="215.0" layoutY="154.0" text="phone">
-         <font>
-            <Font name="Poppins Regular" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="215.0" layoutY="191.0" text="email">
-         <font>
-            <Font name="Poppins Regular" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="215.0" layoutY="228.0" text="address">
-         <font>
-            <Font name="Poppins Regular" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="494.0" layoutY="80.0" text="employee id">
-         <font>
-            <Font name="Poppins Regular" size="14.0" />
-         </font>
-      </Label>
-      <Label fx:id="addEmployeeButton" layoutX="317.0" layoutY="340.0" onMouseClicked="#addEmployeeMouseClicked" prefHeight="30.0" prefWidth="133.0" style="-fx-alignment: center; -fx-background-color: black;" text="Add Employee" textFill="WHITE">
-         <font>
-            <Font name="Poppins Regular" size="16.0" />
-         </font>
-      </Label>
-      <TextField fx:id="firstNameText" layoutX="307.0" layoutY="78.0" prefHeight="20.0" prefWidth="167.0">
-         <font>
-            <Font name="Poppins Regular" size="14.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="lastNameText" layoutX="307.0" layoutY="113.0" prefHeight="20.0" prefWidth="167.0">
-         <font>
-            <Font name="Poppins Regular" size="14.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="phoneText" layoutX="307.0" layoutY="148.0" prefHeight="20.0" prefWidth="167.0">
-         <font>
-            <Font name="Poppins Regular" size="14.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="emailText" layoutX="307.0" layoutY="183.0" prefHeight="20.0" prefWidth="167.0">
-         <font>
-            <Font name="Poppins Regular" size="14.0" />
-         </font>
-      </TextField>
-      <TextArea fx:id="addressText" layoutX="307.0" layoutY="220.0" prefHeight="64.0" prefWidth="244.0" />
-      <TextField fx:id="employeeIdText" editable="false" layoutX="588.0" layoutY="75.0" prefHeight="30.0" prefWidth="79.0">
-         <font>
-            <Font name="Poppins Regular" size="14.0" />
-         </font>
-      </TextField>
-      <Separator layoutX="197.0" layoutY="56.0" prefHeight="3.0" prefWidth="486.0" />
-      <Label layoutX="215.0" layoutY="299.0" text="role">
-         <font>
-            <Font name="Poppins Regular" size="14.0" />
-         </font>
-      </Label>
-      <ComboBox fx:id="roleComboBox" layoutX="307.0" layoutY="296.0" prefHeight="25.0" prefWidth="167.0" />
-   </children>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0"
+      prefWidth="686.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.forepaw.clinic.controllers.fxcontrollers.AddEmployeeController">
+    <children>
+        <ImageView fx:id="forepawLogo" fitHeight="30.0" fitWidth="40.0" layoutX="14.0" layoutY="14.0"
+                   onMouseClicked="#forepawLogoClicked" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@./images/logo.png"/>
+            </image>
+        </ImageView>
+        <Label fx:id="forepawLabel" layoutX="53.0" layoutY="16.0" onMouseClicked="#forepawLabelClicked"
+               prefHeight="30.0" prefWidth="79.0" text="forepaw">
+            <font>
+                <Font name="Poppins Regular" size="19.0"/>
+            </font>
+        </Label>
+        <Label fx:id="updateEmployeeLabel" contentDisplay="CENTER" layoutX="14.0" layoutY="154.0"
+               onMouseClicked="#updateEmployeeMouseClicked" prefHeight="30.0" prefWidth="167.0"
+               style="-fx-alignment: center; -fx-background-color: black;" text="update employee" textAlignment="CENTER"
+               textFill="WHITE">
+            <font>
+                <Font name="Poppins Regular" size="14.0"/>
+            </font>
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+        </Label>
+        <Label fx:id="viewEmployeesLabel" contentDisplay="CENTER" layoutX="14.0" layoutY="196.0"
+               onMouseClicked="#viewEmployeesMouseClicked" prefHeight="30.0" prefWidth="167.0"
+               style="-fx-alignment: center; -fx-background-color: black;" text="view employees" textAlignment="CENTER"
+               textFill="WHITE">
+            <font>
+                <Font name="Poppins Regular" size="14.0"/>
+            </font>
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+        </Label>
+        <Label fx:id="deleteEmployeeLabel" contentDisplay="CENTER" layoutX="14.0" layoutY="238.0"
+               onMouseClicked="#deleteEmployeeMouseClicked" prefHeight="30.0" prefWidth="167.0"
+               style="-fx-alignment: center; -fx-background-color: black;" text="delete employee" textAlignment="CENTER"
+               textFill="WHITE">
+            <font>
+                <Font name="Poppins Regular" size="14.0"/>
+            </font>
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+        </Label>
+        <Separator layoutX="197.0" orientation="VERTICAL" prefHeight="401.0" prefWidth="2.0"/>
+        <Label layoutX="280.0" layoutY="20.0" prefWidth="244.0" style="-fx-alignment: center;" text="Add Employee">
+            <font>
+                <Font name="Poppins Regular" size="16.0"/>
+            </font>
+        </Label>
+        <Label layoutX="215.0" layoutY="80.0" text="first name">
+            <font>
+                <Font name="Poppins Regular" size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="215.0" layoutY="117.0" text="last name">
+            <font>
+                <Font name="Poppins Regular" size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="215.0" layoutY="154.0" text="phone">
+            <font>
+                <Font name="Poppins Regular" size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="215.0" layoutY="191.0" text="email">
+            <font>
+                <Font name="Poppins Regular" size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="215.0" layoutY="228.0" text="address">
+            <font>
+                <Font name="Poppins Regular" size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="494.0" layoutY="80.0" text="employee id">
+            <font>
+                <Font name="Poppins Regular" size="14.0"/>
+            </font>
+        </Label>
+        <Label fx:id="addEmployeeButton" layoutX="317.0" layoutY="340.0" onMouseClicked="#addEmployeeMouseClicked"
+               prefHeight="30.0" prefWidth="133.0" style="-fx-alignment: center; -fx-background-color: black;"
+               text="Add Employee" textFill="WHITE">
+            <font>
+                <Font name="Poppins Regular" size="16.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="firstNameText" layoutX="307.0" layoutY="78.0" prefHeight="20.0" prefWidth="167.0">
+            <font>
+                <Font name="Poppins Regular" size="14.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="lastNameText" layoutX="307.0" layoutY="113.0" prefHeight="20.0" prefWidth="167.0">
+            <font>
+                <Font name="Poppins Regular" size="14.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="phoneText" layoutX="307.0" layoutY="148.0" prefHeight="20.0" prefWidth="167.0">
+            <font>
+                <Font name="Poppins Regular" size="14.0"/>
+            </font>
+        </TextField>
+        <TextField fx:id="emailText" layoutX="307.0" layoutY="183.0" prefHeight="20.0" prefWidth="167.0">
+            <font>
+                <Font name="Poppins Regular" size="14.0"/>
+            </font>
+        </TextField>
+        <TextArea fx:id="addressText" layoutX="307.0" layoutY="220.0" prefHeight="64.0" prefWidth="244.0">
+            <font>
+                <Font name="Poppins Regular" size="14.0"/>
+            </font>
+        </TextArea>
+        <TextField fx:id="employeeIdText" editable="false" layoutX="588.0" layoutY="75.0" prefHeight="30.0"
+                   prefWidth="79.0">
+            <font>
+                <Font name="Poppins Regular" size="14.0"/>
+            </font>
+        </TextField>
+        <Separator layoutX="197.0" layoutY="56.0" prefHeight="3.0" prefWidth="486.0"/>
+        <Label layoutX="215.0" layoutY="299.0" text="role">
+            <font>
+                <Font name="Poppins Regular" size="14.0"/>
+            </font>
+        </Label>
+        <ComboBox fx:id="roleComboBox" layoutX="307.0" layoutY="296.0" prefHeight="25.0" prefWidth="167.0"/>
+        <Label fx:id="warningLabel" layoutX="467.0" layoutY="346.0" prefHeight="17.0" prefWidth="209.0"
+               style="-fx-alignment: center;" textFill="#a40505">
+            <font>
+                <Font name="Poppins Regular" size="14.0"/>
+            </font>
+        </Label>
+    </children>
 </Pane>

@@ -69,7 +69,7 @@ public class HomePageController {
 
     @FXML
     protected void updateEmployeeMouseExited() {
-        addEmployee.setFont(Font.font("Poppins", FontWeight.NORMAL, 14));
+        updateEmployee.setFont(Font.font("Poppins", FontWeight.NORMAL, 14));
     }
 
     @FXML

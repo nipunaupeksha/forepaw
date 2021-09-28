@@ -63,6 +63,17 @@ public class EmployeeController {
         return res > 0;
     }
 
+    //update employee roleId to default roleId if role is getting deleted
+    public static boolean updateEmployeeRole(Employee employee, String roleId) throws ClassNotFoundException, SQLException {
+        String sql = "Update employee set roleId=? where employeeId=?";
+        Connection conn = DBConnection.getDBConnection().getConnection();
+        PreparedStatement stm = conn.prepareStatement(sql);
+        stm.setObject(1, roleId);
+        stm.setObject(2, employee.getEmployeeId());
+        int res = stm.executeUpdate();
+        return res > 0;
+    }
+
     //get all employees
     public static ArrayList<Employee> getAllEmployees() throws ClassNotFoundException, SQLException {
         String sql = "Select * from employee";

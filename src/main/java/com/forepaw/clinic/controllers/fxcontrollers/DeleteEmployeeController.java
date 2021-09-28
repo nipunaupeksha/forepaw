@@ -89,6 +89,14 @@ public class DeleteEmployeeController {
                 boolean status = EmployeeController.deleteEmployee(employeeIdText.getText().trim());
                 warningLabel.setTextFill(Color.GREEN);
                 warningLabel.setText("Employee deleted");
+                //set parameters null
+                employeeIdText.setText("");
+                firstNameText.setText("");
+                lastNameText.setText("");
+                phoneText.setText("");
+                emailText.setText("");
+                addressText.setText("");
+                roleText.setText("");
             } catch (SQLException e) {
                 e.printStackTrace();
             } catch (ClassNotFoundException e) {
@@ -129,7 +137,7 @@ public class DeleteEmployeeController {
                     phoneText.setText(employee.getPhone());
                     emailText.setText(employee.getEmail());
                     addressText.setText(employee.getAddress());
-                    roleText.setText(role.getRoleName());
+                    roleText.setText(role.getRoleId()+" - "+role.getRoleName());
                 } else {
                     warningLabel.setText("No such employee.");
                 }

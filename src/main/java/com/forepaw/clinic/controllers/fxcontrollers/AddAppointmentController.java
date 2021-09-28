@@ -37,8 +37,8 @@ public class AddAppointmentController {
     public Label warningLabel;
     public TextArea notesText;
 
-    //TODO
-    AddAppointmentController(){
+    @FXML
+    public void initialize(){
         try{
             //get all customers
             ArrayList<Customer> customerList = CustomerController.getAllCustomers();
