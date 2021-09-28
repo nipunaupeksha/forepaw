@@ -1,6 +1,6 @@
 package com.forepaw.clinic.models;
 
-public class Appoint {
+public class Appointment {
     private String appointId;
     private String customerId;
     private String employeeId;
@@ -8,10 +8,10 @@ public class Appoint {
     private String time;
     private String notes;
 
-    public Appoint() {
+    public Appointment() {
     }
 
-    public Appoint(String appointId, String customerId, String employeeId, String date, String time, String notes) {
+    public Appointment(String appointId, String customerId, String employeeId, String date, String time, String notes) {
         this.appointId = appointId;
         this.customerId = customerId;
         this.employeeId = employeeId;

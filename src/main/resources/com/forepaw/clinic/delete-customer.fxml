@@ -119,5 +119,10 @@
             <Image url="@./images/search.png" />
          </image>
       </ImageView>
+      <Label fx:id="warningLabel" layoutX="481.0" layoutY="353.0" prefHeight="17.0" prefWidth="197.0" style="-fx-alignment: center;" textFill="#b90808">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font>
+      </Label>
    </children>
 </Pane>

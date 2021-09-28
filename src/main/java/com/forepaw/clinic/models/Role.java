@@ -3,13 +3,13 @@ package com.forepaw.clinic.models;
 public class Role {
     private String roleId;
     private String roleName;
-    private int rolePriority;
+    private String rolePriority;
     private String roleDescription;
 
     public Role() {
     }
 
-    public Role(String roleId, String roleName, int rolePriority, String roleDescription) {
+    public Role(String roleId, String roleName, String rolePriority, String roleDescription) {
         this.roleId = roleId;
         this.roleName = roleName;
         this.rolePriority = rolePriority;
@@ -32,11 +32,11 @@ public class Role {
         this.roleName = roleName;
     }
 
-    public int getRolePriority() {
+    public String getRolePriority() {
         return rolePriority;
     }
 
-    public void setRolePriority(int rolePriority) {
+    public void setRolePriority(String rolePriority) {
         this.rolePriority = rolePriority;
     }
 
