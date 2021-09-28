@@ -1,6 +1,6 @@
 package com.forepaw.clinic.controllers.fxcontrollers;
 
-import com.forepaw.clinic.HomePage;
+import com.forepaw.clinic.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.text.Font;
@@ -32,7 +32,13 @@ public class HomePageController {
     //employees
     @FXML
     protected void addEmployeeMouseClicked() {
-        //TODO
+        try {
+            Stage stage = (Stage) addEmployee.getScene().getWindow();
+            stage.close();
+            new AddEmployeePage().start(stage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -47,7 +53,13 @@ public class HomePageController {
 
     @FXML
     protected void updateEmployeeMouseClicked() {
-        //TODO
+        try {
+            Stage stage = (Stage) updateEmployee.getScene().getWindow();
+            stage.close();
+            new UpdateEmployeePage().start(stage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -62,7 +74,13 @@ public class HomePageController {
 
     @FXML
     protected void viewEmployeesMouseClicked() {
-        //TODO
+        try {
+            Stage stage = (Stage) viewEmployees.getScene().getWindow();
+            stage.close();
+            new ViewEmployeesPage().start(stage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -77,7 +95,13 @@ public class HomePageController {
 
     @FXML
     protected void deleteEmployeeMouseClicked() {
-        //TODO
+        try {
+            Stage stage = (Stage) deleteEmployee.getScene().getWindow();
+            stage.close();
+            new DeleteEmployeePage().start(stage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -93,13 +117,13 @@ public class HomePageController {
     //customers
     @FXML
     protected void addCustomerMouseClicked() {
-        /*try {
+        try {
             Stage stage = (Stage) addCustomer.getScene().getWindow();
             stage.close();
             new AddCustomerPage().start(stage);
         } catch (IOException e) {
             e.printStackTrace();
-        }*/
+        }
     }
 
     @FXML
@@ -114,7 +138,13 @@ public class HomePageController {
 
     @FXML
     protected void updateCustomerMouseClicked() {
-        //TODO
+        try {
+            Stage stage = (Stage) updateCustomer.getScene().getWindow();
+            stage.close();
+            new UpdateCustomerPage().start(stage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -129,7 +159,13 @@ public class HomePageController {
 
     @FXML
     protected void viewCustomersMouseClicked() {
-        //TODO
+        try {
+            Stage stage = (Stage) viewCustomers.getScene().getWindow();
+            stage.close();
+            new ViewCustomersPage().start(stage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -144,7 +180,13 @@ public class HomePageController {
 
     @FXML
     protected void deleteCustomerMouseClicked() {
-        //TODO
+        try {
+            Stage stage = (Stage) deleteCustomer.getScene().getWindow();
+            stage.close();
+            new DeleteCustomerPage().start(stage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -160,7 +202,13 @@ public class HomePageController {
     //roles
     @FXML
     protected void addRoleMouseClicked() {
-        //TODO
+        try {
+            Stage stage = (Stage) addRole.getScene().getWindow();
+            stage.close();
+            new AddRolePage().start(stage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -175,7 +223,13 @@ public class HomePageController {
 
     @FXML
     protected void updateRoleMouseClicked() {
-        //TODO
+        try {
+            Stage stage = (Stage) updateRole.getScene().getWindow();
+            stage.close();
+            new UpdateRolePage().start(stage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -191,6 +245,13 @@ public class HomePageController {
     @FXML
     protected void viewRolesMouseClicked() {
         //TODO
+        /*try {
+            Stage stage = (Stage) viewRoles.getScene().getWindow();
+            stage.close();
+            new ViewRolesPage().start(stage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
     }
 
     @FXML
@@ -205,7 +266,13 @@ public class HomePageController {
 
     @FXML
     protected void deleteRoleMouseClicked() {
-        //TODO
+        try {
+            Stage stage = (Stage) deleteRole.getScene().getWindow();
+            stage.close();
+            new DeleteRolePage().start(stage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -221,7 +288,13 @@ public class HomePageController {
     //appointments
     @FXML
     protected void addAppointmentMouseClicked() {
-        //TODO
+        try {
+            Stage stage = (Stage) addAppointment.getScene().getWindow();
+            stage.close();
+            new AddAppointmentPage().start(stage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -237,6 +310,13 @@ public class HomePageController {
     @FXML
     protected void updateAppointmentMouseClicked() {
         //TODO
+        /*try {
+            Stage stage = (Stage) updateAppointment.getScene().getWindow();
+            stage.close();
+            new UpdateAppointmentPage().start(stage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
     }
 
     @FXML
